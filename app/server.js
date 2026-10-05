@@ -9,10 +9,14 @@ app.get('/', (req, res) => {
 app.get('/health', (req, res) => {
   res.status(200).json({
     status: 'UP',
-message: 'Application is healthy'
+    message: 'Application is healthy'
   });
 });
 
-app.listen(3000, () => {
-  console.log('Application running on port 3000');
-});
+if (require.main === module) {
+  app.listen(3000, () => {
+    console.log('Application running on port 3000');
+  });
+}
+
+module.exports = app;
