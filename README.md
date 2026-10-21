@@ -1,1 +1,1 @@
-# git-release-management-demo
+# Git Release Management Demo
